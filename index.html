@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Landing Page for fictionary company" />
+    <meta
+      name="keywords"
+      content="frontendmentor, Landing, Landing Page, HTML, TailwindCSS and JavaScript"
+    />
+    <meta name="author" content="Valentín" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+
+  <body class="bg-customred lg:grid lg:grid-cols-2">
+    <picture class="absolute">
+      <source
+        media="(min-width: 600px)"
+        srcset="bg-intro-desktop.png"
+        alt="Background Image for only aesthetic"
+      />
+      <img
+        class="max-h-screen"
+        src="bg-intro-mobile.png"
+        alt="Background Image for only aesthetic"
+      />
+    </picture>
+
+    <header
+      class="flex flex-col justify-center items-center mt-24 lg:ml-16 lg:mr-16"
+    >
+      <h1
+        class="font-sans font-bold text-center text-4xl lg:text-5xl text-white"
+      >
+        Learn to code by watching others
+      </h1>
+      <p
+        class="mt-10 font-sans text-white text-center text-lg w-96 lg:w-[35em]"
+      >
+        See how experienced developers solve problems in real-time. Watching
+        scripted tutorials is great, but understanding how developers think is
+        invaluable.
+      </p>
+    </header>
+
+    <main class="flex flex-col justify-center items-center mt-24">
+      <div
+        class="bg-customviolet w-96 h-auto flex justify-center items-center rounded-2xl z-10 shadow-2xl lg:w-[35em]"
+      >
+        <p class="pt-5 pb-5 text-center font-sans text-white text-xl">
+          <span class="block font-bold">Try it free 7 days then </span>
+          $20/mo. thereafter
+        </p>
+      </div>
+      <form
+        action="#"
+        id="form"
+        class="mt-6 w-96 bg-white rounded-2xl flex flex-col z-10 justify-center items-center shadow-2xl lg:w-[35em]"
+      >
+        <label for="name" class="sr-only">First Name</label>
+        <input
+          id="name"
+          name="name"
+          type="text"
+          placeholder="First Name"
+          required
+          class="border border-gray-400 rounded w-80 lg:w-[80%] h-auto mt-7 pl-4 pt-5 pb-5 text-customblue font-bold font-sans text-xl focus:outline-none focus:border-gray-900"
+        />
+        <span id="name_error" class="hidden text-customred">Please enter a valid name</span>
+        <span id="name_valid" class="hidden text-customgreen">¡Thanks!</span>
+
+        <label for="lastname" class="sr-only">Last Name</label>
+        <input
+          id="lastname"
+          name="lastname"
+          type="text"
+          placeholder="Last Name"
+          required
+          class="border border-gray-400 rounded w-80 lg:w-[80%] h-auto mt-7 pl-4 pt-5 pb-5 text-customblue font-bold font-sans text-xl focus:outline-none focus:border-gray-900"
+        />
+        <span id="lastName_error" class="hidden text-customred">Please enter a valid last name</span>
+        <span id="lastName_valid" class="hidden text-customgreen">¡Thanks!</span>
+
+        <label for="email" class="sr-only">Email Address</label>
+        <input
+          id="email"
+          name="email"
+          type="email"
+          placeholder="Email Address"
+          required
+          class="border border-gray-400 rounded w-80 lg:w-[80%] h-auto mt-7 pl-4 pt-5 pb-5 text-customblue font-bold font-sans text-xl focus:outline-none focus:border-gray-900"
+        />
+        <span id="email_error" class="hidden text-customred">Please enter a valid email address</span>
+        <span id="email_valid" class="hidden text-customgreen">¡Thanks!</span>
+
+        <input
+          pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+          title="La contraseña debe tener al menos 8 caracteres, incluir una letra, un número y un carácter especial." 
+          id="password"
+          name="password"
+          type="Password"
+          placeholder="Password"
+          required
+          class="border border-gray-400 rounded w-80 lg:w-[80%] h-auto mt-7 pl-4 pt-5 pb-5 text-customblue font-bold font-sans text-xl focus:outline-none focus:border-gray-900"
+        />
+        <span id="password_error" class="hidden text-customred">Please enter a valid password</span>
+        <span id="password_valid" class="hidden text-customgreen">¡Thanks!</span>
+        
+        <span id="inbox_message" class="text-customgreen hidden">Check your inbox email</span>
+        <span id="submit_valid" class="text-customgreen hidden">¡Enjoy your free trial!</span>
+
+        <button
+          id="submit"
+          name="submit"
+          type="submit"
+          class="mt-7 w-80 lg:w-[80%] h-auto bg-customgreen pt-5 pb-5 rounded-xl font-sans text-white text-2xl hover:scale-105 transition-transform cursor-pointer"
+        >
+          Claim your free trial
+        </button>
+
+        <p class="mt-5 mb-5 text-center w-80 font-sans text-gray-500">
+          By clicking the button, you are agreeing to our
+          <a href="#" class="text-red-600 font-bold underline">
+            Terms and Services
+          </a>
+        </p>
+      </form>
+    </main>
+
+    <footer class="mt-10 mb-5 text-center lg:col-span-2">
+      <p class="font-sans">
+        Challenge by
+        <a
+          class="text-red-800 underline"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener, noreferrer"
+        >
+          Frontend Mentor.
+        </a>
+        Coded by
+        <a
+          class="text-red-800 underline"
+          href="https://github.com/valentyyyyn"
+          target="_blank"
+          rel="noopener, noreferrer"
+        >
+          Valentín.
+        </a>
+      </p>
+    </footer>
+    <script src="validationForm.js"></script>
+  </body>
+</html>
